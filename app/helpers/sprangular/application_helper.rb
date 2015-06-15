@@ -104,7 +104,7 @@ module Sprangular
           gsub(/^\/app\/assets\/templates/, '/assets').
           gsub(/.slim$/, '')
 
-        hash[asset_path] = Rails.application.assets.find_asset(sprockets_path).body.html_safe
+        hash[asset_path] = Rails.application.assets.find_asset(sprockets_path).source.html_safe
         hash
       end
     end
